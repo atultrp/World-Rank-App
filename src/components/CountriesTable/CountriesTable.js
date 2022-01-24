@@ -3,6 +3,7 @@ import { KeyboardArrowDownRounded, KeyboardArrowUpRounded } from '@material-ui/i
 import Link from "next/link";
 import { useState } from 'react';
 
+
 const orderBy = (countries, value, direction) => {
     if (direction === "asc") {
         return [...countries].sort((a, b) => a[value] > b[value] ? 1 : -1);
@@ -73,7 +74,7 @@ const CountriesTable = ({ countries }) => {
         </div>
 
         {orderedCountries.map((country) => (
-            <Link href={`./country/${country.cca3}`}>
+            <Link href={`./country/${country.cca3}`} passHref>
                 <div className={styles.row}>
                     <div className={styles.flag}>
                         <img src={country.flags.svg} alt={country.name.common} />
