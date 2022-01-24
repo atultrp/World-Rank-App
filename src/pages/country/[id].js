@@ -23,6 +23,7 @@ const Country = ({ country }) => {
 
     useEffect(() => {
         getBorders();
+        //eslint-disable-next-line
     }, []);
 
 

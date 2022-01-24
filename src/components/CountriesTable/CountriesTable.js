@@ -58,10 +58,11 @@ const CountriesTable = ({ countries }) => {
 
     return <div>
         <div className={styles.heading}>
+            <div className={styles.heading_flag}></div>
             <button className={styles.heading_name} onClick={() => setValueAndDirection("name")}>
                 <div>Name</div>
 
-                <SortArrow />
+                <SortArrow direction={direction} />
             </button>
 
             <button className={styles.heading_population} onClick={() => setValueAndDirection("population")}>
@@ -74,6 +75,9 @@ const CountriesTable = ({ countries }) => {
         {orderedCountries.map((country) => (
             <Link href={`./country/${country.cca3}`}>
                 <div className={styles.row}>
+                    <div className={styles.flag}>
+                        <img src={country.flags.svg} alt={country.name.common} />
+                    </div>
                     <div className={styles.name}>{country.name.common}</div>
                     <div className={styles.population}>{country.population}</div>
                 </div>
