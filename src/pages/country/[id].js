@@ -1,16 +1,17 @@
 import Layout from '../../components/Layout/Layout';
 import styles from './Country.module.css';
 import { useState, useEffect } from 'react'
+import axios from 'axios';
 
 const getCountry = async (id) => {
-    const res = await fetch(`https://restcountries.com/v3.1/alpha/${id}`);
+    const res = await axios.get(`https://restcountries.com/v3.1/alpha/${id}`);
 
-    const country = await res.json();
+    const country = await res.data;
     return country;
 }
 
 const Country = ({ country }) => {
-    console.log(country);
+    // console.log(country);
     const countryInfo = country[0];
     const [borders, setBorders] = useState([]);
 
@@ -19,7 +20,7 @@ const Country = ({ country }) => {
 
         setBorders(bordersInfo);
     }
-    console.log(borders);
+    // console.log(borders);
 
     useEffect(() => {
         getBorders();
