@@ -4,6 +4,10 @@
 * User explore more about the countries by just clicking on it. 
 * There is one more cool functionality in this application which is theme switcher functionality (light theme and dark theme).
 
+
+https://user-images.githubusercontent.com/69186169/151412763-d7b36a67-2c6e-4c1f-af07-cadae38144af.mp4
+
+
 ## 💻️ Tech Included
 * HTML
 * CSS
